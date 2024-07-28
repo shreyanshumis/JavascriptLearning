@@ -26,12 +26,13 @@ const newArr = myArr.join()
 
 //slice, splice
 
-console.log("A", myArr)
+console.log("A - ", myArr)
 
 const myn1 = myArr.slice(1,3) //returns a section of an array without manipulating original array
 console.log(myn1)
-console.log("B", myArr)
+console.log("B - ", myArr)
 
 const myn2 = myArr.splice(1,3) //splice actually manipulates the original array too
 console.log(myn2)
-console.log("C", myArr)
+console.log("C - ", myArr)
+
