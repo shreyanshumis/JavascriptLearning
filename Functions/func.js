@@ -29,6 +29,35 @@ function loginUserMessage(username){
     return `${username} logged in successfully!`
 }
 
-let msg = loginUserMessage("Shrey")
+// let msg = loginUserMessage("Shrey")
 
-console.log(msg);
+// console.log(msg);
+
+function calcCartPrice(...num1) { //in case you dont know how many arguments come - use rest operator(same syntax as spread operator(triple dots))
+    return num1
+}
+
+console.log(calcCartPrice(2,34,45,654))
+
+const user = {
+    username: "shrey",
+    price: 99
+}
+
+function handleObj(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+// handleObj(user)
+// handleObj({
+//     username:"yo",
+//     price:23
+// })
+
+const myArr = [200, 245, 435]
+
+function returnSecondValue(getMyArr){
+    return getMyArr[1]
+}
+
+console.log(returnSecondValue(myArr));
