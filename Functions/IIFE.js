@@ -16,7 +16,7 @@ chai()
     console.log(`DB CONNECTED`);
 })(); //semicolon is needed here since IIFE doesnt know where to stop
 
-()(); //IIFE function call
+// ()(); //IIFE function call
 
 
 //IIFE function with arrow function
