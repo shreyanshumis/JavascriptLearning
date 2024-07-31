@@ -40,3 +40,27 @@ myCoding.forEach( (item) => {
     console.log(item.languageName); //took a value out of array of objects
 } )
 
+//foreach doesnt return anything
+
+const myNums = [1,2,3,4,5,6,7,8,9,10]
+
+myNums.filter((myNums) => num > 4)//filter takes callback 
+//this returns values, not foreach
+//if u use parenthesis then it's implicit return(auto return)
+//if u use curly braces then it's explicit return(manually write return keyword)
+
+const newNums = myNums.filter( (num) => {
+    return num > 4;
+})
+
+
+//using foreach instead of filter
+const newNums2 = []
+
+myNums2.forEach( (num) => {
+    if (num > 4){
+        newNums2.push(num)
+    }
+} )
+
+console.log(newNums2);
