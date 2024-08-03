@@ -1,0 +1,41 @@
+DOM - console in web browser
+
+
+console.log(window)
+
+//document
+
+console.log(window.document)
+you can also write just (document)
+
+to get the other JQuery etc. 
+console.dir(document)
+
+-----------------------------------
+On our html file
+
+document.getElementById('title)
+
+document.getElementById('title).id 
+
+document.getElementById('title).class //doesnt work
+document.getElementById('title).className //works(we write class but it's actually classname.)
+
+document.getElementById('title).getAttribute('id')
+
+document.getElementById('title).setAttribute('class', 'test')
+//if u use setAttribute, it will replace the current attribute too so add the current attribute to it(space bar) if you want to retain it.
+
+--------
+styling:-
+
+const title = document.getElementById('title')
+
+title.style.backgroundColour = 'blue'
+
+----------------------
+title.textContent - It shows all content, even shows hidden text
+title.innerHTML - It even shows the html code in the text
+title.innerText - It shows visible text
+
+-----------------------
