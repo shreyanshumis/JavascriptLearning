@@ -39,3 +39,48 @@ title.innerHTML - It even shows the html code in the text
 title.innerText - It shows visible text
 
 -----------------------
+querySelector vs querySelectorAll 
+1st select the first item(and returns an array) but 2nd selects all(and returns a nodelist).
+
+document.querySelector('h2')
+document.querySelector('#title') //you get the id
+document.querySelector('.heading')
+//u can use css selectors here.
+
+document.queryselector('input[type="password"]')
+--------------------------
+Colour changing using querySelector
+
+document.querySelector('ul') //selects entire unordered list in one.html
+const myul = document.querySelector('ul')
+myul.querySelector('li')
+
+const turnGreen = myul.querySelector('li')
+turnGreen.style.backgroundColour = "green"
+
+------------------------
+document.querySelectorAll('li')
+//you get a node list
+//node list and htmlcollection are NOT pure array.
+
+const tempLiList = document.querySelectorAll('li')
+//tempLiList is a node list here.
+tempLiList.style.color = 'green' //won't work cuz nodelist works a bit differently than arrays do
+tempLiList[0].style.color = 'green' //works 
+
+tempLiList.forEach(function (l) {
+    l.style.backgroundColour = 'green'
+})
+
+----------------------------
+document.getElementByClassName('list-item')
+//you get htmlcollection [] now
+
+const tempClassList = document.getElementByClassName('list-item')
+
+Convert it to array -
+const myConvertedArray = Array.from(tempClassList)
+
+myConvertedArray.forEach(function (li) {
+    li.style.color = 'red'
+})
